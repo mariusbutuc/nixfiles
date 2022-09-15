@@ -1,0 +1,8 @@
+UseRoaming no
+
+Host *
+  AddKeysToAgent yes
+  IgnoreUnknown UseKeychain
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519_MB_14_m1max
+  User mariusbutuc

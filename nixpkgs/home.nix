@@ -11,7 +11,16 @@
     bat
   ];
 
-  # Git config using Home Manager modules
+  # Raw configuration files
+  home.file = {
+    sshConfig = {
+      executable = false;
+      source = ./config/ssh;
+      target = ".ssh/config";
+    };
+  };
+
+  # Config using Home Manager modules
   programs.git = import ./config/git.nix;
 
   # This value determines the Home Manager release that your
