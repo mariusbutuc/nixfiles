@@ -11,6 +11,25 @@
     bat
   ];
 
+  # Git config using Home Manager modules
+  programs.git = {
+    enable = true;
+    userName = "Marius Butuc";
+    userEmail = "marius.butuc@gmail.com";
+
+    aliases = {
+      br = "branch";
+      co = "checkout";
+      st = "status";
+    };
+
+    extraConfig = {
+      github = {
+        user = "mariusbutuc";
+      };
+    };
+  };
+
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
