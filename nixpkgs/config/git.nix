@@ -13,5 +13,12 @@
     github = {
       user = "mariusbutuc";
     };
+    push = {
+      autoSetupRemote = "true";
+    };
   };
+
+  ignores = [
+    ".DS_Store"
+  ];
 }
