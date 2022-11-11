@@ -24,7 +24,7 @@ Some of my .nix files, significantly inspired by [ghedamat/nixfiles](https://git
 1. Remember to update, every now and again
 
    ```sh
-   nix-channel --update
+   sudo nix-channel --update
    ```
 
    [standalone installation]: https://nix-community.github.io/home-manager/index.html#sec-install-standalone
