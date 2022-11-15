@@ -13,6 +13,9 @@
     github = {
       user = "mariusbutuc";
     };
+    pull = {
+      rebase = "true";
+    };
     push = {
       autoSetupRemote = "true";
     };
