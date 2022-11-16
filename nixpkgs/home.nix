@@ -18,6 +18,11 @@
       source = ./config/ssh;
       target = ".ssh/config";
     };
+    toolVersions = {
+      executable = false;
+      source = ./config/.tool-versions;
+      target = ".tool-versions";
+    };
   };
 
   # Config using Home Manager modules
