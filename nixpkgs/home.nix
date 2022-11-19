@@ -9,10 +9,16 @@
   # Packages to install
   home.packages = with pkgs; [
     bat
+    direnv
   ];
 
   # Raw configuration files
   home.file = {
+    direnv = {
+      executable = false;
+      source = ./config/direnv.toml;
+      target = ".config/direnv/direnv.toml";
+    };
     sshConfig = {
       executable = false;
       source = ./config/ssh;
