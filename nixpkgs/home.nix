@@ -8,6 +8,7 @@
 
   # Packages to install
   home.packages = with pkgs; [
+    asdf-vm
     bat
     direnv
   ];
