@@ -11,6 +11,7 @@
     asdf-vm
     bat
     direnv
+    tig
   ];
 
   # Raw configuration files
