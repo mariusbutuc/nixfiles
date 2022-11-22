@@ -15,6 +15,11 @@
 
   # Raw configuration files
   home.file = {
+    defaultMixCommands = {
+      executable = false;
+      source = ./config/.default-mix-commands;
+      target = ".default-mix-commands";
+    };
     direnv = {
       executable = false;
       source = ./config/direnv.toml;
