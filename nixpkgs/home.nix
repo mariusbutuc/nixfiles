@@ -25,6 +25,11 @@
       source = ./config/direnv.toml;
       target = ".config/direnv/direnv.toml";
     };
+    dockSettings = {
+      executable = false;
+      source = ./config/com.apple.dock.plist;
+      target = "~/Library/Preferences/com.apple.dock.plist";
+    };
     sshConfig = {
       executable = false;
       source = ./config/ssh;
