@@ -1,7 +1,19 @@
+setopt HIST_IGNORE_ALL_DUPS
+
+
+# Nix
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
+
+# asdf
 export PATH=~/.asdf/shims:$PATH
 source "$(brew --prefix asdf)/libexec/asdf.sh"
+# End asdf
 
 
 # Erlang
