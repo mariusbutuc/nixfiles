@@ -5,14 +5,14 @@ export PATH=~/.asdf/shims:$PATH
 
 
 # Erlang
-# https://github.com/asdf-vm/asdf-erlang#osx
-# brew install autoconf openssl@1.1 wxwidgets libxslt fop
+## https://github.com/asdf-vm/asdf-erlang#osx
+## brew install autoconf openssl@1.1 wxwidgets libxslt fop
 export PATH="$(brew --prefix libxslt)/bin:$PATH"
 export LDFLAGS="-L$(brew --prefix libxslt)/lib"
 export CPPFLAGS="-I$(brew --prefix libxslt)/include"
 
-# https://github.com/asdf-vm/asdf-erlang/issues/116#issuecomment-551377312
-# export CFLAGS="-O2 -g -fno-stack-check"
+## https://github.com/asdf-vm/asdf-erlang/issues/116#issuecomment-551377312
+## export CFLAGS="-O2 -g -fno-stack-check"
 export KERL_BUILD_DOCS=yes
 export KERL_INSTALL_HTMLDOCS=no
 export KERL_INSTALL_MANPAGES=no
@@ -20,5 +20,16 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac --disable-silent-
 
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
 # End Erlang
+
+# Kubectl
+alias k=kubectl
+
+## https://apple.stackexchange.com/a/340718/14117
+autoload -Uz compinit
+compinit
+
+## https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+# End Kubectl
 
 eval "$(direnv hook zsh)"
