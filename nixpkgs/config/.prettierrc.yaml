@@ -1,0 +1,4 @@
+arrowParens: "avoid"
+bracketSpacing: false
+printWidth: 120
+semi: false

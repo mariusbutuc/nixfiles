@@ -25,6 +25,11 @@
       source = ./config/direnv.toml;
       target = ".config/direnv/direnv.toml";
     };
+    prettierrc = {
+      executable = false;
+      source = ./config/.prettierrc.yaml;
+      target = ".prettierrc.yaml";
+    };
     sshConfig = {
       executable = false;
       source = ./config/ssh;
