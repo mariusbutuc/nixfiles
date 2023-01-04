@@ -1,7 +1,7 @@
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 
 export PATH=~/.asdf/shims:$PATH
-. "$(brew --prefix asdf)/libexec/asdf.sh"
+source "$(brew --prefix asdf)/libexec/asdf.sh"
 
 
 # Erlang
@@ -21,6 +21,7 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac --disable-silent-
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
 # End Erlang
 
+
 # Kubectl
 alias k=kubectl
 
@@ -31,5 +32,9 @@ compinit
 ## https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 # End Kubectl
+
+
+source <(ngrok completion)
+
 
 eval "$(direnv hook zsh)"
