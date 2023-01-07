@@ -50,3 +50,7 @@ source <(ngrok completion)
 
 
 eval "$(direnv hook zsh)"
+
+
+# https://docs.appsignal.com/support/operating-systems.html#musl-build-override
+APPSIGNAL_BUILD_FOR_MUSL=1
