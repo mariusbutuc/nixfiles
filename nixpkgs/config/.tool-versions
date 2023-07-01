@@ -1,5 +1,5 @@
-elixir 1.14.2-otp-25
-erlang 25.2
+elixir 1.15.0-otp-26
+erlang 26.0
 kubectl 1.23.6
 nodejs 18.12.1
 ruby 3.1.3
